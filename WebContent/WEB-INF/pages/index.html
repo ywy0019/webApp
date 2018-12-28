@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>myweb</title>
+		</head>
+		<body>
+			<h1>welcome to my world!</h1>
+			<div class="line"></div>
+			<hr class="line">
+			<div>
+				<button id="select" type="submit">µ„Œ“≤È—Ø</button>
+			</div>
+		<script src="jquery-2.1.4.min.js"></script>
+		<script>
+		document.getElementById("select").onclick = function(){
+//			var me =this;
+			$.ajax({
+				url:"http://localhost:8080/myweb/getData",
+				dataType:"json",
+				//data:,
+				type:"get",
+				success:function(e){
+					alert("success");
+				},
+				error:function(e){
+					alert("fail");
+				}
+			})
+		}
+		</script>
+		
+		</body>
+	</html>
